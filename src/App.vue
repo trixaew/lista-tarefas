@@ -1,4 +1,6 @@
 <template>
+<section>
+  <cabecalho />
   <div class="container">
     <h2>{{ titulo }}</h2>
     <div class="input-group">
@@ -20,11 +22,16 @@
       <input v-model="titulo" type="text" />
     </footer>
   </div>
+  <rodape />
+</section>
 </template>
 
 <script>
+import Cabecalho from "@/components/Cabecalho";
+import Rodape from "@/components/Rodape";
 export default {
   name: 'App',
+  components: { Cabecalho , Rodape } ,
   data() {
    return {
      titulo: "Minha lista de tarefas",
